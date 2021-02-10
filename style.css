@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.clear::after{
+    content: "";
+    clear: both;
+    display: block;
+
+}
+.left{
+    float: left;
+}
+.main-div{
+    width: 1500px;
+    margin: auto;
+    text-align: center;
+}
+
+.member-title{
+    padding: 30px;
+}
+.member-title h3{
+    padding: 30px;
+}
+.member-items{
+    width: 25%;
+}
+
+/* hover */
+.member{
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    position: relative;
+    
+}
+
+/* center theke hover start hole after a top 50%,,left 50% korte hobe...than....hover korle jokhon after ber hobe....tokhon top 0...left 0 korte hobe */
+.member::after{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: rgba(255, 0, 0,.7);
+    border-radius: 50%;
+    transition: .5s;
+    transform: scale(0);
+
+}
+.member:hover::after{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: scale(1);
+
+}
+
+.inner-text p{
+    margin-top: 50%;
+}
+.inner-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+
+    transform: scale(0);
+}
+.member:hover .inner-text{
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+.bottom-text{
+    width: 100px;
+    margin: 20px auto;
+    font-weight: 900;
+    transition: .5s;
+}
+.bottom-text:hover{
+    color: red;
+}
+.footer-section{
+    color: #fff;
+    padding: 10px 0;
+    background: #2c3e50;
+    margin-top: 30px;
+}
+
+
